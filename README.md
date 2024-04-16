@@ -7,7 +7,7 @@ Build API's faster with several helpers
 
 namespace Ziqx\FabexApi\Helpers;
 
-**Encode JSON**
+# Encode JSON
 generateBody($data);
 
 
