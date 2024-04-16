@@ -1,5 +1,5 @@
 {
-    "name": "fathah/fabexapi",
+    "name": "ziqx/fabexapi",
     "description": "Build APIs faster",
     "type": "library",
     "license": "MIT",
@@ -11,7 +11,7 @@
     "authors": [
         {
             "name": "Fathah Cr",
-            "email": "abdulfathahkodag@gmail.com"
+            "email": "fathah@ziqx.cc"
         }
     ],
     "minimum-stability": "stable",
