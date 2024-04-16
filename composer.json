@@ -1,0 +1,19 @@
+{
+    "name": "fathah/fabexapi",
+    "description": "Build APIs faster",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Fathah\\Fabexapi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fathah Cr",
+            "email": "abdulfathahkodag@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
