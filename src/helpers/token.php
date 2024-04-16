@@ -4,8 +4,12 @@ namespace Ziqx\FabexApi\Helpers;
 
 
 class AuthToken{
-    function getAuthJWTToken($request, $missingMessage="token_missing", $invalidMessage="token_invalid")
+   public static function getAuthJWTToken($request, $messages=[])
 {
+
+    $missingMessage = isset($messages['missing']) ? $messages['missing'] : 'token_missing';
+    $invalidMessage = isset($messages['invalid']) ? $messages['invalid'] : 'token_invalid';
+
 
     header('Content-Type: application/json');
     $authorization = $request->getHeaderLine('Authorization');

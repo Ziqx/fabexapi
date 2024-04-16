@@ -7,8 +7,12 @@ namespace Ziqx\FabexApi\Helpers;
 class AuthorizeAPI
 {
 
-    public function authorizeAPIKey($request, $secret)
+    public static function authorizeAPIKey($request, $secret, $messages=[])
     {
+        $missingMessage = isset($messages['missing']) ? $messages['missing'] : 'api_missing';
+        $invalidMessage = isset($messages['invalid']) ? $messages['invalid'] : 'api_invalid';
+        $validMessage = isset($messages['valid']) ? $messages['valid'] : 'api_valid';
+        
         $headerkey = $request->header('X-API-KEY');
         header('Content-Type: application/json');
 
@@ -16,7 +20,7 @@ class AuthorizeAPI
             http_response_code(401);
             echo json_encode([
                 'code' => 1,
-                'message' => 'key_api_missing'
+                'message' => $missingMessage
             ]);
             exit;
         }
@@ -28,14 +32,14 @@ class AuthorizeAPI
             http_response_code(401);
             echo json_encode([
                 'code' => 1,
-                'message' => 'key_api_invalid'
+                'message' => $invalidMessage
             ]);
             exit;
         }
 
         return [
             'code' => 0,
-            'message' => 'key_api_valid'
+            'message' => $validMessage
         ];
     }
 }
