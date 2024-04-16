@@ -1,11 +1,18 @@
 # Fabex API
 Build API's faster with several helpers
  
+
+# Install the package
+
+```sh
+composer require ziqx/fabexapi
+```
+
 ## Body Helper
 
 ```php
 
-generateBody($data);
+BodyHelper::generateBody($data);
 
 
 ```
