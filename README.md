@@ -5,11 +5,25 @@ Build API's faster with several helpers
 
 ```php
 
-namespace Ziqx\FabexApi\Helpers;
-
-# Encode JSON
 generateBody($data);
 
 
+```
+
+## Authorization Helper
+
+```php
+
+AuthorizeAPI::authorizeAPIKey($request, $secret);
+
+
+```
+
+
+## Auth Token Helper
+
+```php
+
+AuthToken::getAuthJWTToken($request);
 
 ```
