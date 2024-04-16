@@ -1,6 +1,7 @@
 # Fabex API
 Build API's faster with several helpers
- 
+
+| Note: This package is mainly build to work with CodeIgniter 4
 
 # Install the package
 
@@ -14,7 +15,6 @@ composer require ziqx/fabexapi
 
 BodyHelper::generateBody($data);
 
-
 ```
 
 ## Authorization Helper
@@ -22,7 +22,6 @@ BodyHelper::generateBody($data);
 ```php
 
 AuthorizeAPI::authorizeAPIKey($request, $secret);
-
 
 ```
 
